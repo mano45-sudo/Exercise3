@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Power ON / OFF System</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    button {
+      padding: 15px 50px;
+      font-size: 22px;
+    }
+    p {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <button id="onBtn">ON</button>
+  <button id="offBtn">OFF</button>
+
+  <p id="statusText">Status: OFF</p>
+
+  <script>
+    let status = "OFF"
+
+    document.getElementById("onBtn").onclick = function () {
+      status = "ON"
+      document.getElementById("statusText").innerText = "Status: " + status
+    }
+
+    document.getElementById("offBtn").onclick = function () {
+      status = "OFF"
+      document.getElementById("statusText").innerText = "Status: " + status
+    }
+  </script>
+</body>
+</html>
